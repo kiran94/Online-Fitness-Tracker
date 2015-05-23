@@ -1,0 +1,37 @@
+SQL Creation Scripts: 
+
+CREATE TABLE user(
+	user_id int primary key auto_increment not null, 
+	user_name varchar(50) not null, 
+	user_dob DATE not null, 
+	user_height SMALLINT(3) not null
+); 
+
+
+CREATE TABLE measurement(
+	measurement_id int primary key auto_increment not null,
+	chest smallint(3), 
+	upper_arms smallint(3),
+	fore_arms smallint(3),
+	waist smallint(3),
+	thighs smallint(3),
+	calves smallint(3), 
+	weight smallint(3),
+	user_id int not null
+);
+
+CREATE TABLE Excercise(
+	excercise_id int primary key auto_increment not null,
+	excercise_name varchar(20) not null, 
+	excercise_img_url varchar(255) not null
+); 
+
+
+CREATE TABLE ExcerciseLogs(
+	log_id int primary key auto_increment not null, 
+	excercise_id int not null, 
+	user_id int not null, 
+	exercise_weight smallint(3),
+	excercise_reps tinyint,
+	date DATE not null
+); 
