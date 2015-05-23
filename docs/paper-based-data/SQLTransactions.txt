@@ -1,20 +1,20 @@
 SQL Transactions: 
 
-
-Retrieve User Data:
+GET User Data:
 
 	SELECT * FROM user u, measurements m 
-	WHERE u.user_id = m.user_id
+	WHERE u.user_id = <PHP GET PARAMETER>
+	AND u.user_id = m.user_id
 	ORDER BY m.measurement_id DESC
 	LIMIT BY 1;
 
 
-Retrieve all exercise:
+GET all exercise:
 
 	SELECT exercise_name, exercise_img_url FROM Exercise;
 
 
-Retrieve all user exercises:
+GET all user exercises:
 
 	SELECT e.exercise_name, e.exercise_img_url, el.exercise_weight, el.exercise_reps, el.date 
 	FROM user u, Exercise e, ExerciseLogs el
@@ -22,7 +22,7 @@ Retrieve all user exercises:
 	AND el.exercise_id = e.exercise_id 
 
 
-Retrieve average weight per excercise 
+GET average weight per excercise 
 
 	SELECT e.exercise_name, AVG(el.exercise_weight) 
 	FROM user u, Exercise e, ExerciseLogs el
