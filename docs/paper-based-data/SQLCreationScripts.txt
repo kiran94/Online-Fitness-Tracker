@@ -28,9 +28,9 @@ CREATE TABLE Exercise(
 ); 
 
 
-CREATE TABLE ExcerciseLogs(
+CREATE TABLE ExerciseLogs(
 	log_id int primary key auto_increment not null, 
-	excercise_id int not null, 
+	exercise_id int not null, 
 	user_id int not null, 
 	exercise_weight smallint(3),
 	exercise_reps tinyint,

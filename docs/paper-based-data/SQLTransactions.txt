@@ -22,7 +22,22 @@ Retrieve all user exercises:
 	AND el.exercise_id = e.exercise_id 
 
 
-Retrieve average weight for excercise 
+Retrieve average weight per excercise 
 
-	SELECT * 
-	FROM user u, Ex
+	SELECT e.exercise_name, AVG(el.exercise_weight) 
+	FROM user u, Exercise e, ExerciseLogs el
+	WHERE u.user_id = el.user_id 
+	AND el.exercise_id = e.exercise_id 
+	GROUP BY e.exercise_name; 
+
+POST user Data: 
+
+	INSERT INTO user(user_name, user_dob, user_height) VALUES(<PHP POST VALUES HERE>);
+
+POST user measurements: 
+
+	INSERT INTO measurements(chest, upper_arms, fore_arms, waist, thighs, calves, bodyfat, weight, user_id) VALUES(<PHP POST VALUES HERE>);
+
+POST Exercise Logs:
+
+	INSERT INTO ExerciseLogs(exercise_id, user_id, exercise_weight, exercise_reps, date);
