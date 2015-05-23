@@ -15,7 +15,8 @@ CREATE TABLE measurement(
 	fore_arms smallint(3),
 	waist smallint(3),
 	thighs smallint(3),
-	calves smallint(3), 
+	calves smallint(3),
+	bodyfat tinyint, 
 	weight smallint(3),
 	user_id int not null
 );
