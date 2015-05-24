@@ -20,23 +20,8 @@
 		//Store coloumns to print 
 		$cols = array('user_id', 'user_name', 'user_height');
 
-		//Start JSON formatting. 
-		echo "{";
-
-		//For each returned record 
-		while($row = mysqli_fetch_array($result))
-		{
-			//For each column 
-			for($i=0; $i<sizeof($cols); $i++)
-			{
-				//Print the key value pair. 
-				echo " \"" . $cols[$i] ."\" : " . "\"" . $row[$cols[$i]] . "\"";
-				//If not the last value then print a comma. 
-				if($i!=sizeof($cols)-1) { echo ","; }	
-			}
-		}
-		//End JSON formatting. 
-		echo "}";
+		//Print JSON with the above columns. 
+		$requestObj->printJSON($cols, $result); 
 	}
 	else
 	{	

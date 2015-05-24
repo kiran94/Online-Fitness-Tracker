@@ -29,5 +29,29 @@
 			//Return the result set. 
 			return $result; 
 		}
+
+		//Function prints JSON format of the result set depending on what columns were set. 
+		public function printJSON($cols, $result)
+		{
+			//Start JSON formatting. 
+			echo "{";
+
+			//For each returned record 
+			while($row = mysqli_fetch_array($result))
+			{
+				//For each column 
+				for($i=0; $i<sizeof($cols); $i++)
+				{
+					//Print the key value pair. 
+					echo " \"" . $cols[$i] ."\" : " . "\"" . $row[$cols[$i]] . "\"";
+					//If not the last value then print a comma. 
+					if($i!=sizeof($cols)-1) { echo ","; }	
+				}
+			}
+			//End JSON formatting. 
+			echo "}";
+		}
 	}
+
+
 ?>
