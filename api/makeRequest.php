@@ -15,6 +15,13 @@
 			//Execute the query. 
 			$result = mysqli_query($con, $query); 
 
+			if (!$result) 
+			{
+			    printf("Error: %s\n", mysqli_error($con));
+			    exit();
+			}
+
+
 			//Close the connection. 
 			mysqli_close($con); 
 

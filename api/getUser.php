@@ -4,9 +4,9 @@
 	{
 		//Build the query using the parameter
 		$query = "SELECT * FROM user u, measurements m 
-				 WHERE u.user_id = " . $_GET['user_id'] . " AND u.user_id = m.user_id
-				 ORDER BY m.measurement_id DESC
-				 LIMIT BY 1"; 
+				 WHERE u.user_id =  '{$_GET['user_id']}' 
+				 AND u.user_id = m.user_id
+				 ORDER BY m.measurement_id DESC"; 
 
 		//Import code to request data. 
 		require_once "makeRequest.php"; 
@@ -21,7 +21,11 @@
 		while($row = mysqli_fetch_array($result))
 		{
 			//Print values. 
-			echo $row['user_id']; 
+			echo $row['user_id'];
+			echo "<br/>";
+			echo $row['user_name']; 
+			echo "<br/>";
+			echo $row['weight']; 
 		}
 	}
 	else
