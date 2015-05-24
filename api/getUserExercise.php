@@ -3,10 +3,11 @@
 	if(isset($_GET['user_id']))
 	{
 		//Build the query using the parameter
-		$query = "SELECT * FROM user u, measurements m 
-				 WHERE u.user_id = " . $_GET['user_id'] . " AND u.user_id = m.user_id
-				 ORDER BY m.measurement_id DESC
-				 LIMIT BY 1"; 
+		$query = "SELECT e.exercise_name, e.exercise_img_url, el.exercise_weight, el.exercise_reps, el.date 
+					FROM user u, Exercise e, ExerciseLogs el
+					WHERE u.user_id = el.user_id 
+					AND el.exercise_id = e.exercise_id
+					AND u.user_id = " . $_GET['user_id'] . ""; 
 
 		//Import code to request data. 
 		require_once "makeRequest.php"; 
