@@ -19,7 +19,8 @@ GET all user exercises:
 	SELECT e.exercise_name, e.exercise_img_url, el.exercise_weight, el.exercise_reps, el.date 
 	FROM user u, Exercise e, ExerciseLogs el
 	WHERE u.user_id = el.user_id 
-	AND el.exercise_id = e.exercise_id 
+	AND el.exercise_id = e.exercise_id
+	AND u.user_id = <PHP GET PARAMETER> 
 
 
 GET average weight per excercise 
