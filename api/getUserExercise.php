@@ -4,7 +4,7 @@
 	{
 		//Build the query using the parameter
 		$query = "SELECT e.exercise_name, e.exercise_img_url, el.exercise_weight, el.exercise_reps, el.date 
-					FROM user u, Exercise e, ExerciseLogs el
+					FROM user u, Exercises e, ExerciseLogs el
 					WHERE u.user_id = el.user_id 
 					AND el.exercise_id = e.exercise_id
 					AND u.user_id = '{$_GET['user_id']}'"; 
@@ -22,7 +22,12 @@
 		while($row = mysqli_fetch_array($result))
 		{
 			//Print values. 
-			echo $row['e.exercise_name']; 
+			echo $row['exercise_name'];
+			echo " "; 
+			echo $row['exercise_weight'];
+			echo " "; 
+			echo $row['exercise_reps'];
+			echo "<br/>";
 		}
 	}
 	else
