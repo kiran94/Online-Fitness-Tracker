@@ -15,6 +15,7 @@
 			//Execute the query. 
 			$result = mysqli_query($con, $query); 
 
+			//For Degugging. 
 			if (!$result) 
 			{
 			    printf("Error: %s\n", mysqli_error($con));
