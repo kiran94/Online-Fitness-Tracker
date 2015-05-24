@@ -17,5 +17,6 @@
 	{
 		//Print values. 
 		echo $row['exercise_name']; 
+		echo "<br/>";
 	}
 ?>
