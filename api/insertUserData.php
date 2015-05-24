@@ -14,7 +14,7 @@
 		//Make the request and pass the query. 
 		$result = $requestObj->request($query); 
 
-		echo "Record Inserted.";
+		echo "{\"Result\" : \"Success\"}";
 	}
 	else
 	{	
