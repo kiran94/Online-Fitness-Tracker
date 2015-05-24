@@ -6,13 +6,13 @@
 		$query = "INSERT INTO user(user_name, user_dob, user_height) VALUES(" . $_GET['user_name'] ." , " . $_GET['user_dob'] ." , " . $_GET['user_height'] .")"; 
 
 		//Import code to request data. 
-		require_once "makeRequest.php"; 
+		include "makeRequest.php"; 
 
 		//Create new object for request
-		$request = new makeRequest(); 
+		$requestObj = new makeRequest(); 
 
 		//Make the request and pass the query. 
-		$result = $request.request($query); 
+		$result = $requestObj->request($query); 
 
 		echo "Record Inserted.";
 	}

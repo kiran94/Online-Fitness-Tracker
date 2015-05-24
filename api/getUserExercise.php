@@ -13,10 +13,11 @@
 		require_once "makeRequest.php"; 
 
 		//Create new object for request
-		$request = new makeRequest(); 
+		//Create new object for request
+		$requestObj = new makeRequest(); 
 
 		//Make the request and pass the query. 
-		$result = $request.request($query); 
+		$result = $requestObj->request($query);
 
 		//For each returned record 
 		while($row = mysqli_fetch_array($result))
