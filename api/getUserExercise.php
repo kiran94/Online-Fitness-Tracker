@@ -13,7 +13,6 @@
 		require_once "makeRequest.php"; 
 
 		//Create new object for request
-		//Create new object for request
 		$requestObj = new makeRequest(); 
 
 		//Make the request and pass the query. 
