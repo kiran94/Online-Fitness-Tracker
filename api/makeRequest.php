@@ -10,7 +10,7 @@
 			//Create a connection object. 
 			$connection = new connection(); 
 			//Create a new connection to the database. 
-			$con = $connection.getConnection(); 
+			$con = $connection->getConnection(); 
 
 			//Execute the query. 
 			$result = mysqli_query($con, $query); 
