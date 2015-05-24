@@ -7,7 +7,7 @@
 					FROM user u, Exercise e, ExerciseLogs el
 					WHERE u.user_id = el.user_id 
 					AND el.exercise_id = e.exercise_id
-					AND u.user_id = " . $_GET['user_id'] . ""; 
+					AND u.user_id = '{$_GET['user_id']}'"; 
 
 		//Import code to request data. 
 		require_once "makeRequest.php"; 
