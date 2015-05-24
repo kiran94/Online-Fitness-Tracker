@@ -12,11 +12,25 @@
 	//Make the request and pass the query. 
 	$result = $requestObj->request($query);
 
+	$cols = array('exercise_name', 'exercise_img_url');
+
+	//$requestObj->printJSON($cols, $result); 
+
+	$counter = 0; 
+
+	echo "{";
 	//For each returned record 
 	while($row = mysqli_fetch_array($result))
 	{
-		//Print values. 
-		echo $row['exercise_name']; 
-		echo "<br/>";
+		echo "["; 
+		echo "{\"exercise_name \": " . "\"" . $row['exercise_name'] . "\"";
+		echo ",";
+		echo "\"exercise_img_url\" : " . "\"" . $row['exercise_img_url'] . "\"}";	
+		echo "]";
+
+
+		if($counter!=mysqli_num_rows($result)-1){ echo ","; }
+		$counter++; 
 	}
+	echo "}";
 ?>
