@@ -24,7 +24,8 @@
 	margin-top: 2em; 
 }
 
-.img_icon
+.exercise_nodes
 {
-	display: inline; 
+	margin: 1em; 
+	border: 1px solid black; 
 }

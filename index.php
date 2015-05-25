@@ -15,7 +15,6 @@
 	<!-- end styles -->
 </head>
 <body>
-
 	<!-- container -->
 	<div class="container">
 
@@ -46,7 +45,14 @@
 					<!-- add exercise -->
 					<h5 class="log_header">Add Exercise</h5>
 					<select name="exercise" class="fullWidth">
-						<?php require_once "addLogs/getExerciseList.php"; ?>
+						<?php 
+							require_once "addLogs/getExerciseList.php"; 
+							
+							while($row = mysqli_fetch_array($result))
+							{
+								echo "<option class='log_option' >" . ucfirst($row['exercise_name']) ."</option>"; 
+							}
+						?>
 					</select>
 					<br/>
 					<!-- end add exercise -->
@@ -95,16 +101,13 @@
 						echo "Reps: " . $row['exercise_reps']; 
 						echo "</div>";
 					}
-
-
 				?>
 			</div>
 			<!-- end recent logs -->
 
+
 		</div>
 		<!-- end body content -->
-
-
 
 		<?php
 			require_once "footer.php";
