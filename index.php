@@ -41,12 +41,43 @@
 			<!-- add log -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Add Logs</h2>
+				<div id="form">
+
+					<!-- exercise -->
+					<!-- <select name="exercise">
+						<?php
+
+						?>
+					</select>
+ -->
+					<!-- weight -->
+					<select name="weight">
+						<?php
+							$min = 5; 
+							$max = 200;
+							$index = 1; 
+
+							for($i=$min; $i<=$max; $i+=5)
+							{
+								echo "<option value=" . ($index*$min) .">" . ($index*$min) ."</option>";
+								$index++;  
+							}
+						?>
+					</select>
+
+					<!-- reps -->
+
+
+				</div>
+
 			</div>
+			<!-- end add log -->
 
 			<!-- recent logs -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Recent Logs</h2>
 			</div>
+			<!-- end recent logs -->
 
 		</div>
 		<!-- end body content -->
