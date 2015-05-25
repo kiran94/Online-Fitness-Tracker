@@ -1,7 +1,7 @@
 <?php
 
 	$title = "Fitness Tracker"; 
-	$subtitle = "Track your fitness activities"; 
+	$subtitle = "<br/>Track your fitness activities"; 
 
 	echo "<div class='row'>"; 
 		echo "<div class='col-xs-12'>"; 
