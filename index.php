@@ -43,23 +43,10 @@
 				<h2>Add Logs</h2>
 				<div id="form">
 
-
 					<!-- add exercise -->
 					<h5>Add Exercise</h5>
 					<select name="exercise">
-						<?php
-							require_once "api/makeRequest.php"; 
-
-							$req = new makeRequest(); 
-							$query = "SELECT * FROM Exercises"; 
-
-							$result = $req->request($query); 
-
-							while($row = mysqli_fetch_array($result))
-							{
-								echo "<option>" . ucfirst($row['exercise_name']) ."</option>"; 
-							}
-						?>
+						<?php require_once "addLogs/getExerciseList.php"; ?>
 					</select>
 					<br/>
 					<!-- end add exercise -->
@@ -67,12 +54,7 @@
 					<!-- add weight -->
 					<h5>Add Weight</h5>
 					<select name="weight">
-						<?php
-							for($i=0; $i<200; $i+=5)
-							{
-								echo "<option value=" . $i .">" . $i ."</option>";
-							}
-						?>
+						<?php require_once "addLogs/getWeightList.php"; ?>
 					</select>
 					<br/>
 					<!-- end add weight -->
@@ -80,16 +62,12 @@
 					<!-- add reps -->
 					<h5>Add Reps</h5>
 					<select name="reps">
-						<?php
-							for($i=0; $i<=30; $i+=5)
-							{
-								echo "<option value=" . $i .">" . $i ."</option>";
-							}
-						?>
+						<?php require_once "addLogs/getRepList.php"; ?>
 					</select>
+					<br/>
 					<!-- end reps -->
 
-
+					<button type="button" class="btn btn-primary">Primary</button>
 				</div>
 
 			</div>
