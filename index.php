@@ -43,29 +43,51 @@
 				<h2>Add Logs</h2>
 				<div id="form">
 
-					<!-- exercise -->
-					<!-- <select name="exercise">
-						<?php
 
-						?>
-					</select>
- -->
-					<!-- weight -->
-					<select name="weight">
+					<!-- add exercise -->
+					<h5>Add Exercise</h5>
+					<select name="exercise">
 						<?php
-							$min = 5; 
-							$max = 200;
-							$index = 1; 
+							require_once "api/makeRequest.php"; 
 
-							for($i=$min; $i<=$max; $i+=5)
+							$req = new makeRequest(); 
+							$query = "SELECT * FROM Exercises"; 
+
+							$result = $req->request($query); 
+
+							while($row = mysqli_fetch_array($result))
 							{
-								echo "<option value=" . ($index*$min) .">" . ($index*$min) ."</option>";
-								$index++;  
+								echo "<option>" . ucfirst($row['exercise_name']) ."</option>"; 
 							}
 						?>
 					</select>
+					<br/>
+					<!-- end add exercise -->
 
-					<!-- reps -->
+					<!-- add weight -->
+					<h5>Add Weight</h5>
+					<select name="weight">
+						<?php
+							for($i=0; $i<200; $i+=5)
+							{
+								echo "<option value=" . $i .">" . $i ."</option>";
+							}
+						?>
+					</select>
+					<br/>
+					<!-- end add weight -->
+
+					<!-- add reps -->
+					<h5>Add Reps</h5>
+					<select name="reps">
+						<?php
+							for($i=0; $i<=30; $i+=5)
+							{
+								echo "<option value=" . $i .">" . $i ."</option>";
+							}
+						?>
+					</select>
+					<!-- end reps -->
 
 
 				</div>
