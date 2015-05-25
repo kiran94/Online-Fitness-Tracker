@@ -5,6 +5,6 @@
 
 	for($i=$start; $i<=$max; $i+=$increment)
 	{
-		echo "<option value=" . $i .">" . $i ."</option>";
+		echo "<option value=" . $i ." class='log_option'>" . $i ."</option>";
 	}
 ?>

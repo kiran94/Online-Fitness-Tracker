@@ -28,8 +28,8 @@
 			<div class="col-xs-12">
 				<ul class="nav nav-tabs">
 				  <li role="presentation" class="active"><a href="#">Home</a></li>
-				  <li role="presentation"><a href="#">Exercises</a></li>
-				  <li role="presentation"><a href="#">Logs</a></li>
+				  <li role="presentation"><a href="exercise.php">Exercise</a></li>
+				  <li role="presentation"><a href="logs.php">Logs</a></li>
 				</ul>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 
 					<!-- add exercise -->
 					<h5>Add Exercise</h5>
-					<select name="exercise">
+					<select name="exercise" class="fullWidth">
 						<?php require_once "addLogs/getExerciseList.php"; ?>
 					</select>
 					<br/>
@@ -53,7 +53,7 @@
 
 					<!-- add weight -->
 					<h5>Add Weight</h5>
-					<select name="weight">
+					<select name="weight" class="fullWidth">
 						<?php require_once "addLogs/getWeightList.php"; ?>
 					</select>
 					<br/>
@@ -61,13 +61,13 @@
 
 					<!-- add reps -->
 					<h5>Add Reps</h5>
-					<select name="reps">
+					<select name="reps" class="fullWidth">
 						<?php require_once "addLogs/getRepList.php"; ?>
 					</select>
 					<br/>
 					<!-- end reps -->
 
-					<button type="button" class="btn btn-primary">Primary</button>
+					<button type="button" class="btn btn-primary" id="addLogsButton">Primary</button>
 				</div>
 
 			</div>

@@ -1,4 +1,13 @@
-.nav-tabs>li>a 
+/*Width of Log Options*/
+.fullWidth
 {
-  color: #009900;
+	width: 100%; 
+}
+
+/*Log Options Submit*/
+#addLogsButton
+{
+	margin-right: auto; 
+	margin-left: auto;
+	display: block;  
 }

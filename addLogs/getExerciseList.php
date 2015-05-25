@@ -8,6 +8,6 @@
 
 	while($row = mysqli_fetch_array($result))
 	{
-		echo "<option>" . ucfirst($row['exercise_name']) ."</option>"; 
+		echo "<option class='log_option' >" . ucfirst($row['exercise_name']) ."</option>"; 
 	}
 ?>

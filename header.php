@@ -1,5 +1,4 @@
 <?php
-
 	$title = "Fitness Tracker"; 
 	$subtitle = "<br/>Track your fitness activities"; 
 
