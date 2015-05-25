@@ -23,22 +23,39 @@
 		<?php require_once "header.php"; ?>
 		<!-- end header -->
 
-		<ul class="nav nav-tabs">
-		  <li role="presentation" class="active"><a href="#">Home</a></li>
-		  <li role="presentation"><a href="#">Exercises</a></li>
-		  <li role="presentation"><a href="#">Logs</a></li>
-		</ul>
+		<!-- navbar -->
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="nav nav-tabs">
+				  <li role="presentation" class="active"><a href="#">Home</a></li>
+				  <li role="presentation"><a href="#">Exercises</a></li>
+				  <li role="presentation"><a href="#">Logs</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end navbar -->
 
+		<!-- body content -->
+		<div class="row">
 
+			<!-- add log -->
+			<div class="col-xs-12 col-md-6">
+				<h2>Add Logs</h2>
+			</div>
 
+			<!-- recent logs -->
+			<div class="col-xs-12 col-md-6">
+				<h2>Recent Logs</h2>
+			</div>
 
+		</div>
+		<!-- end body content -->
 
 
 
 
 	</div>
 	<!-- end container -->
-
 
 	<!-- scripts -->
 		<script type="text/javascript" src="scripts/jquery.min.js"></script>
