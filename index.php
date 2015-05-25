@@ -44,7 +44,7 @@
 				<div id="form">
 
 					<!-- add exercise -->
-					<h5>Add Exercise</h5>
+					<h5 class="log_header">Add Exercise</h5>
 					<select name="exercise" class="fullWidth">
 						<?php require_once "addLogs/getExerciseList.php"; ?>
 					</select>
@@ -52,7 +52,7 @@
 					<!-- end add exercise -->
 
 					<!-- add weight -->
-					<h5>Add Weight</h5>
+					<h5 class="log_header">Add Weight</h5>
 					<select name="weight" class="fullWidth">
 						<?php require_once "addLogs/getWeightList.php"; ?>
 					</select>
@@ -60,14 +60,14 @@
 					<!-- end add weight -->
 
 					<!-- add reps -->
-					<h5>Add Reps</h5>
+					<h5 class="log_header">Add Reps</h5>
 					<select name="reps" class="fullWidth">
 						<?php require_once "addLogs/getRepList.php"; ?>
 					</select>
 					<br/>
 					<!-- end reps -->
 
-					<button type="button" class="btn btn-primary" id="addLogsButton">Primary</button>
+					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Primary</button>
 				</div>
 
 			</div>
@@ -81,7 +81,8 @@
 
 					$query = "SELECT exercise_name, exercise_weight, exercise_reps 
 								FROM user u, exercises e, exerciseLogs el 
-								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id"; 
+								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id
+								LIMIT 5"; 
 
 					$result = $req->request($query); 
 
