@@ -4,7 +4,7 @@
 	{
 		//Build the query using the parameter
 		$query = "SELECT e.exercise_name, AVG(el.exercise_weight) 
-					FROM user u, Exercise e, ExerciseLogs el
+					FROM user u, Exercises e, ExerciseLogs el
 					WHERE u.user_id = el.user_id
 					AND u.user_id = '{$_GET['user_id']}'
 					AND el.exercise_id = e.exercise_id 
