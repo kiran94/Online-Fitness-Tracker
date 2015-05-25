@@ -16,8 +16,28 @@
 </head>
 <body>
 
+	<!-- container -->
+	<div class="container">
+
+		<!-- Header -->
+		<?php require_once "header.php"; ?>
+		<!-- end header -->
+
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#">Home</a></li>
+		  <li role="presentation"><a href="#">Exercises</a></li>
+		  <li role="presentation"><a href="#">Logs</a></li>
+		</ul>
 
 
+
+
+
+
+
+
+	</div>
+	<!-- end container -->
 
 
 	<!-- scripts -->
