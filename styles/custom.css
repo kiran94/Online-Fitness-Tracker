@@ -11,3 +11,10 @@
 	margin-left: auto;
 	display: block;  
 }
+
+.exercise_nodes
+{
+	padding: 1em; 
+	background: #eee; 
+	margin: 1em; 
+}

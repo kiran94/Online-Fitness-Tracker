@@ -76,6 +76,27 @@
 			<!-- recent logs -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Recent Logs</h2>
+				<?php
+					$req = new makeRequest(); 
+
+					$query = "SELECT exercise_name, exercise_weight, exercise_reps 
+								FROM user u, exercises e, exerciseLogs el 
+								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id"; 
+
+					$result = $req->request($query); 
+
+					
+					while($row = mysqli_fetch_array($result))
+					{
+						echo "<div class='exercise_nodes'>"; 
+						echo ucfirst($row['exercise_name']) . "<br/>";
+						echo "Weight: " . $row['exercise_weight']. "<br/>"; 
+						echo "Reps: " . $row['exercise_reps']; 
+						echo "</div>";
+					}
+
+
+				?>
 			</div>
 			<!-- end recent logs -->
 
