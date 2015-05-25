@@ -1,0 +1,6 @@
+Functionality:
+
+Add Exercise Logs with weight and reps 
+View previous logs 
+Browse Different exercises 
+Edit/Delete Logs 
