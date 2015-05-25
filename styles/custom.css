@@ -19,8 +19,12 @@
 	margin: 1em; 
 }
 
-
 .log_header
 {
 	margin-top: 2em; 
+}
+
+.img_icon
+{
+	display: inline; 
 }

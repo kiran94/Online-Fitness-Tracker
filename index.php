@@ -106,7 +106,9 @@
 
 
 
-
+		<?php
+			require_once "footer.php";
+		?>
 	</div>
 	<!-- end container -->
 
