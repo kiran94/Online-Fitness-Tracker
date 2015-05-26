@@ -10,8 +10,9 @@ $(document).ready(function()
 		var repVal = $('#rep_option').val(); 
 
 		var dateValue = new Date(); 
+		var formattedDate = dateValue.getDate() + "-" + dateValue.getMonth()+1 + "-" + dateValue.getYear(); 
 
-		var formData = {exercise_id:exerciseVal, user_id:userVal, exercise_weight:weightVal, exercise_reps:repVal, dateVal:dateValue};
+		var formData = {exercise_id:exerciseVal, user_id:userVal, exercise_weight:weightVal, exercise_reps:repVal, dateVal:formattedDate};
 
 		$.ajax(
 		{
@@ -20,25 +21,18 @@ $(document).ready(function()
 			data: formData,
 			success: function(data)
 			{
-				
+				alert(data); 
 			},
 			error: function(data)
 			{
-
+				alert(data); 
 			}
 
 		});
 		// end ajax 
 
-
-
-
 	}); 
 	// end button click
-
-	
-
-
 
 
 });
