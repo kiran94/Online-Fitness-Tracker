@@ -1,10 +1,10 @@
 <?php
 	//if a value has been set.  
-	if(isset($_GET['exercise_id']) && isset($_GET['user_id']))
+	if(isset($_POST['exercise_id']) && isset($_POST['user_id']))
 	{
 		//Build the query using the parameter
 		$query = "INSERT INTO ExerciseLogs(exercise_id, user_id, exercise_weight, exercise_reps, dateVal)
-					VALUES( '{$_GET['exercise_id']}', '{$_GET['user_id']}', '{$_GET['exercise_weight']}', '{$_GET['exercise_reps']}', '{$_GET['dateVal']}')"; 
+					VALUES( '{$_POST['exercise_id']}', '{$_POST['user_id']}', '{$_POST['exercise_weight']}', '{$_POST['exercise_reps']}', '{$_POST['dateVal']}')"; 
 
 		//Import code to request data. 
 		include "makeRequest.php"; 

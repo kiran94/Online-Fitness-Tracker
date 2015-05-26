@@ -44,7 +44,7 @@
 
 					<!-- add exercise -->
 					<h5 class="log_header">Add Exercise</h5>
-					<select name="exercise" class="fullWidth">
+					<select name="exercise" class="fullWidth" id="exercise_option">
 						<?php 
 							//Import exercise list code to make query and get resultset. 
 							require_once "addLogs/getExerciseList.php"; 
@@ -53,7 +53,7 @@
 							while($row = mysqli_fetch_array($result))
 							{
 								//Print the name of the exercise in upper case. 
-								echo "<option class='log_option' >" . ucfirst($row['exercise_name']) ."</option>"; 
+								echo "<option value='" . $row['exercise_id'] ."' >" . ucfirst($row['exercise_name']) ."</option>"; 
 							}
 						?>
 					</select>
@@ -62,7 +62,7 @@
 
 					<!-- add weight -->
 					<h5 class="log_header">Add Weight</h5>
-					<select name="weight" class="fullWidth">
+					<select name="weight" class="fullWidth" id="weight_option">
 						<?php require_once "addLogs/getWeightList.php"; ?>
 					</select>
 					<br/>
@@ -70,11 +70,15 @@
 
 					<!-- add reps -->
 					<h5 class="log_header">Add Reps</h5>
-					<select name="reps" class="fullWidth">
+					<select name="reps" class="fullWidth" id="rep_option">
 						<?php require_once "addLogs/getRepList.php"; ?>
 					</select>
 					<br/>
 					<!-- end reps -->
+					
+
+					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
+					<input type="hidden" id="user_option" value="1" />
 
 					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Primary</button>
 				</div>
