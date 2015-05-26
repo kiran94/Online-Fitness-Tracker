@@ -10,7 +10,8 @@ $(document).ready(function()
 		var repVal = $('#rep_option').val(); 
 
 		var dateValue = new Date(); 
-		var formattedDate = dateValue.getDate() + "-" + dateValue.getMonth()+1 + "-" + dateValue.getYear(); 
+		var formattedDate = dateValue.getUTCFullYear() + "-" + (dateValue.getUTCMonth()+1) + "-" + dateValue.getUTCDate(); 
+		console.log(formattedDate); 
 
 		var formData = {exercise_id:exerciseVal, user_id:userVal, exercise_weight:weightVal, exercise_reps:repVal, dateVal:formattedDate};
 
@@ -33,10 +34,8 @@ $(document).ready(function()
 				}
 				else
 				{
-					alert(result);
+					$("#alert_log_error").css("display", "block");
 				}
-
-				 
 			},
 			error: function(data)
 			{
