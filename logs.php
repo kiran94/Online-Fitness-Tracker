@@ -46,7 +46,8 @@
 				$query = "SELECT e.exercise_name, el.exercise_weight, el.exercise_reps, el.dateVal, e.exercise_img_url
 							FROM user u, exercises e, exerciseLogs el 
 							WHERE u.user_id = el.user_id 
-							AND e.exercise_id = el.exercise_id;"; 
+							AND e.exercise_id = el.exercise_id
+							ORDER BY dateVal DESC;"; 
 
 				//Make a request and return a resultset. 
 				$result = $req->request($query); 
@@ -58,8 +59,8 @@
 					echo "<div class='col-xs-12 col-sm-10'>";
 						echo "<div class='exercise_nodes'>"; 
 							echo ucfirst($row['exercise_name']) . "<br/>";
-							echo "Weight: " . $row['exercise_weight']. "<br/>"; 
-							echo "Reps: " . $row['exercise_reps']; 
+							echo "Weight: " . $row['exercise_weight'] . "<br/>"; 
+							echo "Reps: " . $row['exercise_reps']  . "<br/>"; 
 							echo "Date: " . $row['dateVal'];
 						echo "</div>";
 					echo "</div>"; 
