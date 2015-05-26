@@ -98,7 +98,7 @@
 								FROM user u, exercises e, exerciseLogs el 
 								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id 
 								ORDER BY dateVal DESC 
-								LIMIT 5"; 
+								LIMIT 3"; 
 
 					//Make a request to the database. 
 					$result = $req->request($query); 
