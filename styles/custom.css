@@ -28,3 +28,8 @@
 {
 	margin: 1em;
 }
+
+#alert_log
+{
+	display: none; 
+}

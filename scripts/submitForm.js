@@ -21,7 +21,22 @@ $(document).ready(function()
 			data: formData,
 			success: function(data)
 			{
-				alert(data); 
+				//alert(data); 
+
+				var parsed_data = JSON.parse(data); 
+
+				var result = parsed_data.Result; 
+
+				if(result == "Success")
+				{
+					$("#alert_log").css("display", "block"); 
+				}
+				else
+				{
+					alert(result);
+				}
+
+				 
 			},
 			error: function(data)
 			{

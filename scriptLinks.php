@@ -1,5 +1,4 @@
 <?php
-
 	/*
 		JS File Links in central location for all web pages. 
 	*/

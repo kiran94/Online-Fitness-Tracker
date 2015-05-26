@@ -29,13 +29,13 @@
 				  <li role="presentation"><a href="exercise.php">Exercise</a></li>
 				  <li role="presentation"><a href="logs.php">Logs</a></li>
 				</ul>
+				<div class="alert alert-success" role="alert" id="alert_log">Successfully Added!</div>
 			</div>
 		</div>
 		<!-- end navbar -->
 
 		<!-- body content -->
 		<div class="row">
-
 			<!-- add log -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Add Logs</h2>
