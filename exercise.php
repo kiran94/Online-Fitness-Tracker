@@ -44,7 +44,7 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					//Print exercise name. 
-					echo "<div class='col-xs-12 col-sm-6'>"; 
+					echo "<div class='col-xs-12 col-sm-6 hidden-xs'>"; 
 						echo "<h3>" . ucfirst($row['exercise_name']) . "</h3>";
 					echo "</div>"; 
 
