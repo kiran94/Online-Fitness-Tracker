@@ -46,10 +46,13 @@
 					<h5 class="log_header">Add Exercise</h5>
 					<select name="exercise" class="fullWidth">
 						<?php 
+							//Import exercise list code to make query and get resultset. 
 							require_once "addLogs/getExerciseList.php"; 
 							
+							//For each row
 							while($row = mysqli_fetch_array($result))
 							{
+								//Print the name of the exercise in upper case. 
 								echo "<option class='log_option' >" . ucfirst($row['exercise_name']) ."</option>"; 
 							}
 						?>
@@ -83,35 +86,36 @@
 			<div class="col-xs-12 col-md-6">
 				<h2>Recent Logs</h2>
 				<?php
+					//Create a new object to make a request. 
 					$req = new makeRequest(); 
 
-					$query = "SELECT exercise_name, exercise_weight, exercise_reps 
+					//Create a query to get exercise logs limited to 5 records. 
+					$query = "SELECT exercise_name, exercise_weight, exercise_reps, dateVal 
 								FROM user u, exercises e, exerciseLogs el 
-								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id
+								WHERE u.user_id = el.user_id and e.exercise_id = el.exercise_id 
+								ORDER BY dateVal DESC 
 								LIMIT 5"; 
 
+					//Make a request to the database. 
 					$result = $req->request($query); 
 
-					
+					//For each record in the resultset. 
 					while($row = mysqli_fetch_array($result))
 					{
+						//Print a node. 
 						echo "<div class='exercise_nodes'>"; 
-						echo ucfirst($row['exercise_name']) . "<br/>";
-						echo "Weight: " . $row['exercise_weight']. "<br/>"; 
-						echo "Reps: " . $row['exercise_reps']; 
+							echo ucfirst($row['exercise_name']) . "<br/>";
+							echo "Weight: " . $row['exercise_weight']. "<br/>"; 
+							echo "Reps: " . $row['exercise_reps']; 
 						echo "</div>";
 					}
 				?>
 			</div>
 			<!-- end recent logs -->
-
-
 		</div>
 		<!-- end body content -->
 
-		<?php
-			require_once "footer.php";
-		?>
+		<?php require_once "footer.php"; ?>
 	</div>
 	<!-- end container -->
 

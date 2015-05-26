@@ -38,14 +38,18 @@
 		<div class="row">
 
 			<?php
+				//Import exercise log request code. 
 				require_once "addLogs/getExerciseList.php"; 
 
+				//For each record in the resultset. 
 				while($row = mysqli_fetch_array($result))
 				{
+					//Print exercise name. 
 					echo "<div class='col-xs-12 col-sm-6'>"; 
 						echo "<h3>" . ucfirst($row['exercise_name']) . "</h3>";
 					echo "</div>"; 
 
+					//Print the exercise img. 
 					echo "<div class='col-xs-12 col-sm-5'>";
 						echo "<img src='" . $row['exercise_img_url'] ."' alt='" . $row['exercise_name'] ."' class='img-responsive'/>"; 
 					echo "</div>"; 
@@ -55,9 +59,7 @@
 		</div>
 		<!-- end body content -->
 
-		<?php
-			require_once "footer.php";
-		?>
+		<?php require_once "footer.php"; ?>
 	</div>
 	<!-- end container -->
 
