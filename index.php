@@ -10,7 +10,7 @@
 	<!-- end meta -->
 
 	<!-- styles -->	
-		<?php require_once "styleLinks.php"; ?>
+		<?php require_once "styles/styleLinks.php"; ?>
 	<!-- end styles -->
 </head>
 <body>
@@ -30,6 +30,7 @@
 				  <li role="presentation"><a href="logs.php">Logs</a></li>
 				</ul>
 				<div class="alert alert-success" role="alert" id="alert_log">Successfully Added!</div>
+				<div class="alert alert-danger" role="alert" id="alert_log_error">Oops! Something went!</div>
 			</div>
 		</div>
 		<!-- end navbar -->
@@ -123,7 +124,7 @@
 	<!-- end container -->
 
 	<!-- scripts -->
-		<?php require_once "scriptLinks.php"; ?>
+		<?php require_once "scripts/scriptLinks.php"; ?>
 	<!-- end scripts -->
 </body>
 </html>

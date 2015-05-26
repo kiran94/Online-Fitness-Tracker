@@ -29,7 +29,7 @@
 	margin: 1em;
 }
 
-#alert_log
+#alert_log, #alert_log_error
 {
 	display: none; 
 }

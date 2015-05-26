@@ -10,7 +10,7 @@
 	<!-- end meta -->
 
 	<!-- styles -->	
-		<?php require_once "styleLinks.php"; ?>
+		<?php require_once "styles/styleLinks.php"; ?>
 	<!-- end styles -->
 </head>
 <body>
@@ -66,7 +66,7 @@
 	<!-- end container -->
 
 	<!-- scripts -->
-		<?php require_once "scriptLinks.php"; ?>
+		<?php require_once "scripts/scriptLinks.php"; ?>
 	<!-- end scripts -->
 </body>
 </html>
