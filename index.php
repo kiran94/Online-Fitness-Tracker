@@ -75,7 +75,7 @@
 					</select>
 					<br/>
 					<!-- end reps -->
-					
+
 
 					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
 					<input type="hidden" id="user_option" value="1" />
@@ -126,6 +126,7 @@
 	<!-- scripts -->
 		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/submitForm.js"></script>
 	<!-- end scripts -->
 </body>
 </html>
