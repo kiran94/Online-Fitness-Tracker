@@ -119,7 +119,10 @@
 		</div>
 		<!-- end body content -->
 
+		<!-- footer -->
 		<?php require_once "footer.php"; ?>
+		<!-- end footer -->
+		
 	</div>
 	<!-- end container -->
 
