@@ -37,20 +37,25 @@
 		<!-- body content -->
 		<div class="row">
 			<?php
+				//Import the request code. 
 				require_once "api/makeRequest.php";
 
+				//Make a new instance of the makeRequest object.
 				$req = new makeRequest(); 
 
+				//Create the query to get log information for a user. 
 				$query = "SELECT e.exercise_name, el.exercise_weight, el.exercise_reps, el.dateVal, e.exercise_img_url
 							FROM user u, exercises e, exerciseLogs el 
 							WHERE u.user_id = el.user_id 
 							AND e.exercise_id = el.exercise_id;"; 
 
+				//Make a request and return a resultset. 
 				$result = $req->request($query); 
 
+				//For each row in the resultset
 				while($row = mysqli_fetch_array($result))
 				{
-
+					//Print a node. 
 					echo "<div class='col-xs-12 col-sm-10'>";
 						echo "<div class='exercise_nodes'>"; 
 							echo ucfirst($row['exercise_name']) . "<br/>";
