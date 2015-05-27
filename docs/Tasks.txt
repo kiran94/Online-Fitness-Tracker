@@ -1,9 +1,9 @@
 Tasks: 
 
-- Design Tables and consider data types 
-- Create Relationships between Tables
-- Ensure Tables are normalised
-- Create SQL Statements 
+- Design Tables and consider data types [Done]
+- Create Relationships between Tables [Done]
+- Ensure Tables are normalised [Done]
+- Create SQL Statements [Done]
 - Implement API(in PHP) for jquery ajax requests 
-- Design/Implement front end 
+- Design/Implement front end [Done]
 
