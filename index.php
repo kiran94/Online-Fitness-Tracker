@@ -81,7 +81,7 @@
 					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
 					<input type="hidden" id="user_option" value="1" />
 
-					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Primary</button>
+					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Submit</button>
 				</div>
 
 			</div>
@@ -119,7 +119,7 @@
 					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
 					<input type="hidden" id="user_option" value="1" />
 
-					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Primary</button>
+					<button type="button" class="btn btn-primary log_header fullWidth" id="addMeasurementButton">Submit</button>
 				</div>
 			</div>
 			<!-- end add measurement log -->
