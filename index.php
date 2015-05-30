@@ -37,7 +37,8 @@
 
 		<!-- body content -->
 		<div class="row">
-			<!-- add log -->
+
+			<!-- add exercise log -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Add Logs</h2>
 				<div id="form">
@@ -84,7 +85,44 @@
 				</div>
 
 			</div>
-			<!-- end add log -->
+			<!-- end add exercise log -->
+
+			<!-- add measurement log -->
+			<div class="col-xs-12 col-md-6">
+				<h2>Add Measurement</h2>
+				<div id="measurement_logs">
+
+					<!-- add weight -->
+					<h5 class="log_header">Weight</h5>
+					<input type='text' name='log_weight' />
+					<br/>
+					<!-- end add exercise -->
+
+					<!-- TODO -->
+					<!-- add weight -->
+					<h5 class="log_header">Add Weight</h5>
+					<select name="weight" class="fullWidth" id="weight_option">
+						<?php require_once "addLogs/getWeightList.php"; ?>
+					</select>
+					<br/>
+					<!-- end add weight -->
+
+					<!-- add reps -->
+					<h5 class="log_header">Add Reps</h5>
+					<select name="reps" class="fullWidth" id="rep_option">
+						<?php require_once "addLogs/getRepList.php"; ?>
+					</select>
+					<br/>
+					<!-- end reps -->
+					<!-- TODO -->
+
+					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
+					<input type="hidden" id="user_option" value="1" />
+
+					<button type="button" class="btn btn-primary log_header fullWidth" id="addLogsButton">Primary</button>
+				</div>
+			</div>
+			<!-- end add measurement log -->
 
 			<!-- recent logs -->
 			<div class="col-xs-12 col-md-6">
@@ -116,6 +154,9 @@
 				?>
 			</div>
 			<!-- end recent logs -->
+
+
+
 		</div>
 		<!-- end body content -->
 
