@@ -87,43 +87,6 @@
 			</div>
 			<!-- end add exercise log -->
 
-			<!-- add measurement log -->
-			<div class="col-xs-12 col-md-6">
-				<h2>Add Measurement</h2>
-				<div id="measurement_logs">
-
-					<!-- add weight -->
-					<h5 class="log_header">Weight</h5>
-					<input type='text' name='log_weight' />
-					<br/>
-					<!-- end add exercise -->
-
-					<!-- TODO -->
-					<!-- add weight -->
-					<h5 class="log_header">Add Weight</h5>
-					<select name="weight" class="fullWidth" id="weight_option">
-						<?php require_once "addLogs/getWeightList.php"; ?>
-					</select>
-					<br/>
-					<!-- end add weight -->
-
-					<!-- add reps -->
-					<h5 class="log_header">Add Reps</h5>
-					<select name="reps" class="fullWidth" id="rep_option">
-						<?php require_once "addLogs/getRepList.php"; ?>
-					</select>
-					<br/>
-					<!-- end reps -->
-					<!-- TODO -->
-
-					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
-					<input type="hidden" id="user_option" value="1" />
-
-					<button type="button" class="btn btn-primary log_header fullWidth" id="addMeasurementButton">Submit</button>
-				</div>
-			</div>
-			<!-- end add measurement log -->
-
 			<!-- recent logs -->
 			<div class="col-xs-12 col-md-6">
 				<h2>Recent Logs</h2>
@@ -154,6 +117,79 @@
 				?>
 			</div>
 			<!-- end recent logs -->
+
+			<!-- add measurement log -->
+			<div class="col-xs-12 col-md-6">
+				<h2>Add Measurement</h2>
+				<div id="measurement_logs">
+
+					<!-- add weight -->
+					<h5 class="log_header">Weight</h5>
+					<input type='text' name='log_weight' />
+					<br/>
+					<!-- end add weight -->
+
+					<!-- add chest -->
+					<h5 class="log_header">Chest</h5>
+					<input type='text' name='log_chest' />
+					<br/>
+					<!-- end add chest -->
+
+					<!-- add upper arms -->
+					<h5 class="log_header">Upper Arms</h5>
+					<input type='text' name='log_upper_arms' />
+					<br/>
+					<!-- end add upper arms -->
+
+					<!-- add fore arms -->
+					<h5 class="log_header">Fore Arms</h5>
+					<input type='text' name='log_fore_arms' />
+					<br/>
+					<!-- end add fore arms -->
+
+					<!-- add waist -->
+					<h5 class="log_header">Waist</h5>
+					<input type='text' name='log_waist' />
+					<br/>
+					<!-- end add waist -->
+
+					<!-- add thighs -->
+					<h5 class="log_header">Thighs</h5>
+					<input type='text' name='log_thighs' />
+					<br/>
+					<!-- end add thighs -->
+
+					<!-- add calves -->
+					<h5 class="log_header">Calves</h5>
+					<input type='text' name='log_calves' />
+					<br/>
+					<!-- end add calves -->
+
+					<!-- add body fat -->
+					<h5 class="log_header">Body Fat</h5>
+					<select name="log_body_fat">
+						<?php
+							for($i=1; $i<=80;$i++)
+							{
+								echo "<option value='" . $i ."'>" . $i ."</option>"; 
+							}
+						?>
+					</select>
+
+
+					<br/>
+					<!-- end add body fat -->
+
+
+
+
+					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
+					<input type="hidden" id="user_option" value="1" />
+
+					<button type="button" class="btn btn-primary log_header fullWidth" id="addMeasurementButton">Submit</button>
+				</div>
+			</div>
+			<!-- end add measurement log -->
 
 
 
