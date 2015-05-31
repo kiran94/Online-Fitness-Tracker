@@ -5,4 +5,5 @@
 	echo "<script type='text/javascript' src='scripts/jquery.min.js'></script>";
 	echo "<script type='text/javascript' src='scripts/bootstrap.min.js'></script>";
 	echo "<script type='text/javascript' src='scripts/submitForm.js'></script>"; 
+	echo "<script type='text/javascript' src='scripts/submitMeasurement.js'></script>";
 ?>

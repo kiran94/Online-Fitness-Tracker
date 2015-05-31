@@ -125,49 +125,49 @@
 
 					<!-- add weight -->
 					<h5 class="log_header">Weight</h5>
-					<input type='text' name='log_weight' />
+					<input type='text' name='log_weight' id='log_weight' />
 					<br/>
 					<!-- end add weight -->
 
 					<!-- add chest -->
 					<h5 class="log_header">Chest</h5>
-					<input type='text' name='log_chest' />
+					<input type='text' name='log_chest' id='log_chest'/>
 					<br/>
 					<!-- end add chest -->
 
 					<!-- add upper arms -->
 					<h5 class="log_header">Upper Arms</h5>
-					<input type='text' name='log_upper_arms' />
+					<input type='text' name='log_upper_arms' id='log_upper_arms' />
 					<br/>
 					<!-- end add upper arms -->
 
 					<!-- add fore arms -->
 					<h5 class="log_header">Fore Arms</h5>
-					<input type='text' name='log_fore_arms' />
+					<input type='text' name='log_fore_arms' id='log_fore_arms' />
 					<br/>
 					<!-- end add fore arms -->
 
 					<!-- add waist -->
 					<h5 class="log_header">Waist</h5>
-					<input type='text' name='log_waist' />
+					<input type='text' name='log_waist' id='log_waist' />
 					<br/>
 					<!-- end add waist -->
 
 					<!-- add thighs -->
 					<h5 class="log_header">Thighs</h5>
-					<input type='text' name='log_thighs' />
+					<input type='text' name='log_thighs' id='log_thighs' />
 					<br/>
 					<!-- end add thighs -->
 
 					<!-- add calves -->
 					<h5 class="log_header">Calves</h5>
-					<input type='text' name='log_calves' />
+					<input type='text' name='log_calves' id='log_calves' />
 					<br/>
 					<!-- end add calves -->
 
 					<!-- add body fat -->
 					<h5 class="log_header">Body Fat</h5>
-					<select name="log_body_fat">
+					<select name="log_body_fat" id='log_body_fat' >
 						<?php
 							for($i=1; $i<=80;$i++)
 							{
@@ -176,12 +176,8 @@
 						?>
 					</select>
 
-
 					<br/>
 					<!-- end add body fat -->
-
-
-
 
 					<!-- TO CHANGE DYNAMICALLY WHEN USER PROFILES ADDED -->
 					<input type="hidden" id="user_option" value="1" />

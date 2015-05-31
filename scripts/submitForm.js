@@ -1,7 +1,7 @@
 $(document).ready(function()
 {	
 	//On click of the id element. 
-	$('#addLogsButton').click(function()
+	$('#addLogsButton').on(click(function()
 	{
 		//Get Values. 
 		var exerciseVal = $('#exercise_option').val(); 
